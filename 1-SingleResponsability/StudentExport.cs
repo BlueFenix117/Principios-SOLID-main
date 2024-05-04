@@ -9,21 +9,16 @@ namespace SingleResponsability
     internal class StudentExport
     {
 
-        private static FakeStorage<Student> storage;
+        private static StudentRepository studentRepository;
 
-        public StudentExport()
+        public StudentExport(StudentRepository student)
         {
-            storage = new();
-        }
-
-        public IEnumerable<Student> GetAll()
-        {
-            return storage.GetAll();
+          studentRepository = student;
         }
 
         public void Export()
         {
-            IEnumerable<Student> students = this.GetAll();
+            IEnumerable<Student> students = studentRepository.GetAll();
             string csv = String.Join(",", students.Select(x => x.ToString()).ToArray());
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
             sb.AppendLine("Id;Fullname;Grades");
