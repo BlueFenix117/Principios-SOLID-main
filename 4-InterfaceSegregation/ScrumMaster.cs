@@ -1,5 +1,7 @@
 using System;
 
+
+
 namespace InterfaceSegregation
 {
     public interface IScrumMasterActivities
@@ -12,12 +14,12 @@ namespace InterfaceSegregation
     {
         public void Plan()
         {
-            Console.WriteLine("I'm planning user stories");
+            Console.WriteLine("Soy un planeador");
         }
 
         public void Communicate()
         {
-            Console.WriteLine("I'm talking to the team user");
+            Console.WriteLine("Esta hablando con el usuario");
         }
     }
 }
