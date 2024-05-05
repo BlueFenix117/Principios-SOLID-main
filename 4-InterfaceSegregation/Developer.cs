@@ -1,34 +1,22 @@
+using System;
+
 namespace InterfaceSegregation
 {
-    public class Developer : IActivities
+    public class Developer : IDevActivities
     {
-        public Developer()
+        public void Design()
         {
+            Console.WriteLine("I'm designing functionalities.");
         }
 
-        public void Plan() 
+        public void Develop()
         {
-            throw new ArgumentException();
+            Console.WriteLine("I'm developing the functionalities required.");
         }
 
-        public void Comunicate() 
+        public void Test()
         {
-            throw new ArgumentException();
-        }
-
-        public void Design() 
-        {
-            throw new ArgumentException();
-        }
-
-        public void Develop() 
-        {
-            Console.WriteLine("I'm developing the functionalities required");
-        }
-
-        public void Test() 
-        {
-            throw new ArgumentException();
+            Console.WriteLine("I'm testing the functionalities.");
         }
     }
 }

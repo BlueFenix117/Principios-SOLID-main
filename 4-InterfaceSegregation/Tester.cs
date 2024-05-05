@@ -1,34 +1,18 @@
+using System;
+
 namespace InterfaceSegregation
 {
-    public class Tester : IActivities
+    // Interfaz específica para las responsabilidades de un Tester
+    public interface ITesterActivities
     {
-        public Tester()
-        {
-        }
+        void Test();
+    }
 
-        public void Plan() 
+    public class Tester : ITesterActivities
+    {
+        public void Test()
         {
-            throw new ArgumentException();
-        }
-
-        public void Comunicate() 
-        {
-            throw new ArgumentException();
-        }
-
-        public void Design() 
-        {
-            throw new ArgumentException();
-        }
-
-        public void Develop() 
-        {
-            Console.WriteLine("I'm developing the functionalities required");
-        }
-
-        public void Test() 
-        {
-            throw new ArgumentException();
+            Console.WriteLine("Soy un app de testeo");
         }
     }
 }
